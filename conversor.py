@@ -3,6 +3,7 @@ fim = 0
 while loop == 1: #comeco loop
     print("\033c")
     num = input('Digite um número: ')
+    nume = num
     i=0
     aa=0
     bb=len(num)-1
@@ -15,7 +16,6 @@ while loop == 1: #comeco loop
     [ 6 ] DECIMAL - HEXADECIMAL.''')
     opcao = int(input("SUA OPCAO: "))\
 #### Binario/Octal/Hexadecimal para decimal ####
-    nume = num
     if opcao == 1:#binario to decimal comeco
         while i<len(num):
             numa=int(num[i])*2**bb
