@@ -22,7 +22,7 @@ while loop == 1: #comeco loop
             aa+=numa
             i+=1
         else:#binario to decimal meio
-            print(f"Seu numero {num} em binario eh {aa} em decimal")
+            print(f"Seu numero {num} em binario eh {aa} em decimal\n")
             fim = int(input("""deseja continuar???
             [ 1 ] SIM 
             [ 2 ] NAO """))
@@ -38,7 +38,7 @@ while loop == 1: #comeco loop
             aa+=numa
             i+=1
         else:#Octal to decimal meio
-            print(f"Seu numero {num} em octal eh {aa} em decimal")
+            print(f"Seu numero {num} em octal eh {aa} em decimal\n")
             fim = int(input("""deseja continuar???
             [ 1 ] SIM 
             [ 2 ] NAO """))
@@ -49,12 +49,28 @@ while loop == 1: #comeco loop
                 print("\033c")
     elif opcao == 3: #hexadecimal to decimal comeco
         while i<len(num):
-            numa=int(num[i])*16**bb
-            bb-=1
+            if num[i]=="0" or num[i]=="1" or num[i]=="2" or num[i]=="3" or num[i]=="4" or num[i]=="5" or num[i]=="6" or num[i]=="7" or num[i]=="8" or num[i]=="9":
+                numa=int(num[i])*16**bb
+            else:
+                cc=num[i]
+                if num[i]=="A" or num[i]=="a":
+                    cc=10
+                elif num[i]=="B" or num[i]=="b":
+                    cc=11
+                elif num[i]=="C" or num[i]=="c":
+                    cc=12
+                elif num[i]=="D" or num[i]=="d":
+                    cc=13
+                elif num[i]=="E" or num[i]=="e":
+                    cc=14
+                elif num[i]=="F" or num[i]=="f":
+                    cc=15
+                numa=int(cc)*16**bb
             aa+=numa
+            bb-=1
             i+=1
         else:#hexadecimal to decimal meio
-            print(f"Seu numero {num} em hexadecimal eh {aa} em decimal")
+            print(f"Seu numero {num} em hexadecimal eh {aa} em decimal \n")
             fim = int(input("""deseja continuar???
             [ 1 ] SIM 
             [ 2 ] NAO """))
@@ -79,7 +95,7 @@ while loop == 1: #comeco loop
                 dd += str(cc)
                 bb -= 1
             else:
-                print(f"Seu numero {num} em decimal eh {dd} em binario")
+                print(f"Seu numero {num} em decimal eh {dd} em binario\n")
                 fim = int(input("""deseja continuar???
                 [ 1 ] SIM 
                 [ 2 ] NAO """))
@@ -103,7 +119,7 @@ while loop == 1: #comeco loop
                 dd += str(cc)
                 bb -= 1
             else:
-                print(f"Seu numero {num} em decimal eh {dd} em octal")
+                print(f"Seu numero {num} em decimal eh {dd} em octal\n")
                 fim = int(input("""deseja continuar???
                 [ 1 ] SIM 
                 [ 2 ] NAO """))
@@ -114,27 +130,41 @@ while loop == 1: #comeco loop
                     print("\033c")
     elif opcao == 6: #decimal to hexadecimal comeco
         aa = ""
+        nume = num
         num = int(num)
-        while num > 0:
-            resto = num % 16
-            num = num // 16
-            aa += str(resto)
-        else:
-            bb = len(aa)-1
-            dd = ""
-            while bb>=0: #decimal to hexadecimal meio
-                cc = (aa[bb])
-                dd += str(cc)
-                bb -= 1
+        while num>0:
+            str(num)
+            resto=num%16
+            if resto==10:
+                resto="A"
+            elif resto==11:
+                resto="B"
+            elif resto==12:
+                resto="C"
+            elif resto==13:
+                resto="D"
+            elif resto==14:
+                resto="E"
+            elif resto==15:
+                resto="F"
+            num=num//16
+            aa+=str(resto)
+        else: #decimal to hexadecimal meio
+            bb=len(aa)-1
+            dd=""
+            while bb>=0:
+                cc=(aa[bb])
+                dd+=str(cc)
+                bb-=1
             else:
-                print(f"Seu numero {num} em decimal eh {dd} em hexadecimal")
+                print(f"Seu numero {nume} em decimal eh {dd} em hexadecimal\n")
                 fim = int(input("""deseja continuar???
                 [ 1 ] SIM 
                 [ 2 ] NAO """))
                 if fim == 2:
                     break
                 else:
-                    loop = 1#decimal to hexadecimal final
+                    loop = 1 #decimal to hexadecimal final
                     print("\033c")
     else:#final
         print("ERROR")
