@@ -102,6 +102,7 @@ while loop == 1: #comeco loop
         Peterson Maranho Santos
         Victor Goya Pinto
         Lucas Marques Russi
+        Lucas da Silva Trindade
         2022""")
         continuar_loop()
 
