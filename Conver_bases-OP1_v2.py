@@ -1,7 +1,7 @@
 loop = 1
 fim = 0
 def perg_num():
-    #Perguntar o numero e transformalo em string
+    #Perguntar o numero e transforma-lo em string
     #
     global  nume, expoente, num
     num = input("""Digite um número: """)
@@ -10,6 +10,7 @@ def perg_num():
 
 def continuar_loop():
     #Pegunta se quer continuar o looping
+    #
     global loop
     fim = int(input("""deseja continuar???
     [ 1 ] SIM 
@@ -21,7 +22,7 @@ def continuar_loop():
          loop = 1 
 
 def Redefinir_variaveis():
-    #serve para redefinir as variaveis pro 0. Pra que elas nao acumulem valores
+    #Serve para redefinir as variaveis pro 0. Pra que elas nao acumulem valores
     #
     global posit_num,expoente, soma
     posit_num = 0
@@ -42,6 +43,8 @@ while loop == 1: #comeco loop
 
 #### Binario/Octal/Hexadecimal para decimal ####
 
+#Binario para decimal
+
     if opcao == 1:#Binario para decimal comeco
         perg_num()
         Redefinir_variaveis()
@@ -53,6 +56,8 @@ while loop == 1: #comeco loop
         else:
             print(f"Seu numero {nume} em binario é {soma} em decimal\n")
             continuar_loop()#Binario to decimal final
+            
+#Octal para decimal
             
     elif opcao == 2: #Octal to decimal comeco
         perg_num()
@@ -66,6 +71,8 @@ while loop == 1: #comeco loop
             print(f"Seu numero {nume} em octal é {soma} em decimal\n")
             continuar_loop()#Octal to decimal final
 
+#Hexadecimal para decimal            
+       
     elif opcao == 3: #Hexadecimal to decimal comeco
         perg_num()
         Redefinir_variaveis()
@@ -97,7 +104,7 @@ while loop == 1: #comeco loop
     elif opcao == 4:#Sobre o trabalho
         print("\033c")
         print("""
-        Projeto Interdisciplinar:
+        Projeto Interdisciplinar
         Feito por :
         Peterson Maranho Santos
         Victor Goya Pinto
