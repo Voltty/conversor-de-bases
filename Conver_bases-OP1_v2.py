@@ -21,7 +21,7 @@ def continuar_loop():
          loop = 1 
 
 def Redefinir_variaveis():
-    #serve para redefinir as variaveis pro 0. Pra que elas nem acumulem valores
+    #serve para redefinir as variaveis pro 0. Pra que elas nao acumulem valores
     #
     global posit_num,expoente, soma
     posit_num = 0
