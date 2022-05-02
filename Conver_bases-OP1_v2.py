@@ -1,10 +1,10 @@
 loop = 1
 fim = 0
-def perg_num():
+def perg_num(x):
     #Perguntar o numero e transforma-lo em string
     #
     global  nume, expoente, num
-    num = input("""Digite um número: """)
+    num = input(f"""Digite um número {x}\n "Se não for respeitado a regra de numero podem haver errors" """)
     nume = num
     expoente=len(num)-1
 
@@ -46,7 +46,7 @@ while loop == 1: #comeco loop
 #Binario para decimal
 
     if opcao == 1:#Binario para decimal comeco
-        perg_num()
+        perg_num("(0 e 1):")
         Redefinir_variaveis()
         while posit_num<len(num):
             numa=int(num[posit_num])*2**expoente
@@ -60,7 +60,7 @@ while loop == 1: #comeco loop
 #Octal para decimal
             
     elif opcao == 2: #Octal to decimal comeco
-        perg_num()
+        perg_num("(Entre 0 a 7):")
         Redefinir_variaveis()
         while posit_num<len(num):
             numa=int(num[posit_num])*8**expoente
@@ -74,7 +74,7 @@ while loop == 1: #comeco loop
 #Hexadecimal para decimal            
        
     elif opcao == 3: #Hexadecimal to decimal comeco
-        perg_num()
+        perg_num("(Entre 0 a 9 , A a F):")
         Redefinir_variaveis()
         while posit_num<len(num):
             if num[posit_num]=="0" or num[posit_num]=="1" or num[posit_num]=="2" or num[posit_num]=="3" or num[posit_num]=="4" or num[posit_num]=="5" or num[posit_num]=="6" or num[posit_num]=="7" or num[posit_num]=="8" or num[posit_num]=="9":
@@ -108,8 +108,8 @@ while loop == 1: #comeco loop
         Feito por :
         Nome: Peterson Maranho Santos RGM: 29810078 Turma:1 O ;
         Nome: Victor Goya Pinto RGM: 30249414 Turma: 1 D;
-        Nome: Lucas Marques Russi RGM: Turma: 1 O;
-        Nome: Lucas da Silva Trindade RGM: Turma:1 D
+        Nome: Lucas Marques Russi RGM: 29712343 Turma: 1 O;
+        Nome: Lucas da Silva Trindade RGM: 29978751 Turma:1 D
         2022""")
         continuar_loop()
 
