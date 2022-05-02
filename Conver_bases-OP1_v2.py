@@ -106,10 +106,10 @@ while loop == 1: #comeco loop
         print("""
         Projeto Interdisciplinar
         Feito por :
-        Peterson Maranho Santos
-        Victor Goya Pinto
-        Lucas Marques Russi
-        Lucas da Silva Trindade
+        Nome: Peterson Maranho Santos RGM: 29810078 Turma:1 O ;
+        Nome: Victor Goya Pinto RGM: 30249414 Turma: 1 D;
+        Nome: Lucas Marques Russi RGM: Turma: 1 O;
+        Nome: Lucas da Silva Trindade RGM: Turma:1 D
         2022""")
         continuar_loop()
 
