@@ -4,7 +4,7 @@ def perg_num(x):
     #Perguntar o numero e transforma-lo em string
     #
     global  nume, expoente, num
-    num = input(f"""Digite um número {x}\n "Se não for respeitado a regra de numero podem haver errors" """)
+    num = input(f"""Digite um número {x}\n "Se não for respeitado a regra de numero podem haver erros" """)
     nume = num
     expoente=len(num)-1
 
