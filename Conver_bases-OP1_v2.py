@@ -49,9 +49,9 @@ while loop == 1: #comeco loop
         perg_num("(0 e 1):")
         Redefinir_variaveis()
         while posit_num<len(num):
-            numa=int(num[posit_num])*2**expoente
+            exponenciacao=int(num[posit_num])*2**expoente
             expoente-=1
-            soma+=numa
+            soma+=exponenciacao
             posit_num+=1
         else:
             print(f"Seu numero {nume} em binario é {soma} em decimal\n")
@@ -63,9 +63,9 @@ while loop == 1: #comeco loop
         perg_num("(Entre 0 a 7):")
         Redefinir_variaveis()
         while posit_num<len(num):
-            numa=int(num[posit_num])*8**expoente
+            exponenciacao=int(num[posit_num])*8**expoente
             expoente-=1
-            soma+=numa
+            soma+=exponenciacao
             posit_num+=1
         else:
             print(f"Seu numero {nume} em octal é {soma} em decimal\n")
@@ -78,23 +78,23 @@ while loop == 1: #comeco loop
         Redefinir_variaveis()
         while posit_num<len(num):
             if num[posit_num]=="0" or num[posit_num]=="1" or num[posit_num]=="2" or num[posit_num]=="3" or num[posit_num]=="4" or num[posit_num]=="5" or num[posit_num]=="6" or num[posit_num]=="7" or num[posit_num]=="8" or num[posit_num]=="9":
-                numa=int(num[posit_num])*16**expoente
+                exponenciacao=int(num[posit_num])*16**expoente
             else:
-                cc=num[posit_num]
+                particula_hexa=num[posit_num]
                 if num[posit_num]=="A" or num[posit_num]=="a":
-                    cc=10
+                    particula_hexa=10
                 elif num[posit_num]=="B" or num[posit_num]=="b":
-                    cc=11
+                    particula_hexa=11
                 elif num[posit_num]=="C" or num[posit_num]=="c":
-                    cc=12
+                    particula_hexa=12
                 elif num[posit_num]=="D" or num[posit_num]=="d":
-                    cc=13
+                    particula_hexa=13
                 elif num[posit_num]=="E" or num[posit_num]=="e":
-                    cc=14
+                    particula_hexa=14
                 elif num[posit_num]=="F" or num[posit_num]=="f":
-                    cc=15
-                numa=int(cc)*16**expoente
-            soma+=numa
+                    particula_hexa=15
+                exponenciacao=int(particula_hexa)*16**expoente
+            soma+=exponenciacao
             expoente-=1
             posit_num+=1
         else:
